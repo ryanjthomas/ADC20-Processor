@@ -2,7 +2,7 @@
 #include "IdleProcess.h"
 #include "fft.h"
 #include "vec_funcs.h"
-#include "gnuplot_i.hpp"
+//#include "gnuplot_i.hpp"
 
 const int buffer_size=3;
 
@@ -76,9 +76,9 @@ void IdleProcess::plotPSD() {
 	std::vector<double>x=linspace<double>(0,800000,PSD.size());
 	
 	//	std::cout << PSD.size() << ":" << x.size() << std::endl;
-	Gnuplot g1;
+	//Gnuplot g1;
 
-	g1.set_style("lines").set_ylogscale().set_xlogscale().plot_xy(x,PSD);
+	//g1.set_style("lines").set_ylogscale().set_xlogscale().plot_xy(x,PSD);
 	
 	std::cin.get();
 };
